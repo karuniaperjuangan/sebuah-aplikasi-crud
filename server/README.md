@@ -1,73 +1,125 @@
+<!-- markdownlint-configure-file {
+  "MD013": {
+    "code_blocks": false,
+    "tables": false
+  },
+  "MD033": false,
+  "MD041": false
+} -->
+
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/55451337/206634498-ad546863-3f23-4fe7-841c-56c2dfac9aad.png"  />
+
+# listify
+
+this is backend side of listify project
+
+A To do list Web App, created for Pemrograman Aplikasi Web class <br/>
+check more about frontend side [here][frontend-side]
+
+![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+
+[Web Page](#web-page) •
+[Output Structure](#output-structure) •
+[Prerequisites](#prerequisites) •
+[Getting Started](#getting-started) •
+[Support File](#support-file)
+
 </div>
 
-<h1 align="center">
-  PAW: Pieces of ArtWork
-</h1>
+## Web Page
 
-<p align="center">
-  PAW merupakan Online Exhibitions yang akan menampilkan berbagai karya seni beserta deskripsi dan pembuat karya
-</p>
+[Listify Website][listify-page]
 
-## Description
+## Author
+- [Wiweka Yoga Sadewa](https://github.com/wiweka24)
+- [Hapsari Prabandhari](https://github.com/Hapsarip)
+- [Kurnia Dwi Utami](https://github.com/kurniakdu)
+- [Muhammad Zikriansyah](https://github.com/MuhammadZikriansyah)
+- [Vira Ayu Oktaviani](https://github.com/viraayuoktvn)
 
-<p align="justify">
-PAW merupakan Online Exhibitions yang akan menampilkan berbagai karya seni beserta deskripsi dan pembuat karya
-PAW merupakan salah satu website online exhibitions untuk menampilkan berbagai karya seni dua dimensi beserta pembuat karyanya. Membantu para user untuk merasakan pengalaman berkunjung ke art exhibition yang dapat di kunjungi di mana pun dan kapan pun. Selain itu, user juga dapat menambahkan karya seni dua dimensi miliknya hanya dengan mendaftar pada website ini.
-</p>
+## Output Structure
 
-## Related Repository
-- [Frontend Repo](https://github.com/jovianjr/paw-fe) 
-- [Backend Repo](https://github.com/jovianjr/paw-be) (current)
-
-
-## Link
-- link slide presentasi: [di sini](https://drive.google.com/file/d/1zHXKU9QbTYeTJSE-oNfBOWBVvJmC_4fQ) 
-- Front End: https://pieces-of-artwork.netlify.app
-- Back End: https://api-pieces-of-artwork.vercel.app 
-
-## API Documentation
-Please check [API References](https://documenter.getpostman.com/view/17403192/2s83Rwjb7c#1b444c49-cb52-48d0-a546-e70421c09cb5).
-
-## Directories
-    .
-    ├── src                    
-    │   ├── config                # App Configuration
-    │   ├── controllers           # App Functionality
-    │   ├── helpers               # Useful utils
-    │   ├── middleware            # App middleware
-    │   ├── models                # DB Schema
-    │   ├── routes                # Express.js routes
-    │   └── app.js                # Main App Files
-    ├── index.js                # Server Files 
-    ├── package.json
-    └── README.md
-
-
-
-
-## How to use
-Don't forget to fill the .env files
-### npm
-```bash
-npm install
-npm run dev
-```
-### yarn
-```bash
-yarn
-yarn dev
+```shell
+backend-kelompok4/
+├── controller/
+|   ├── activity.js
+|   ├── auth.js
+|   └── user.js
+├── middleware/
+|   ├── authMiddleware
+|   └── errorHandler
+├── models/
+|   ├── activity.js
+|   └── user.js
+├── routes/
+|   ├── activity.js
+|   ├── auth.js
+|   └── user.js
+├── utils/
+|   ├── errorResponse.js
+|   └── validate.js
+├── index.js
+├── package.json
+├── vercel.json
+└── ...
 ```
 
-## Contributing
-Please see our [contributing.md](https://github.com/jovianjr/PAW-BE/blob/dev/CONTRIBUTING.md).
+## Dependencies
+```shell
+bcrypt
+body-parser
+cookie-parser
+cors
+dotenv
+express
+joi
+joi-password-complexity
+jsonwebtoken
+moment
+mongoose
+nodemon
+```
 
-## Anggota Kelompok 7
-Nama  | NIM
-------------- | -------------
-Alphonsus Jovian Joy Reynaldo   | 20/460539/TK/51128
-Adinda Luthfiah S               | 20/463587/TK/51579
-Aulia Nur Fajriyah              | 20/456360/TK/50490
-Siti malatania                  | 20/456380/TK/50510
-Wardatul Radhiyyah              | 20/456381/TK/50511
+## Prerequisites
+[Download][node-js] and install Node.js version 16.15 or higher.
+
+## Getting Started
+Setting up project for local usage.
+1. Clone or Download this repository
+    ```shell
+    https://github.com/Hapsarip/api-crud-kelompok4.git
+    ```
+    if using SSS
+    ```shell
+    git@github.com:Hapsarip/api-crud-kelompok4.git
+    ```
+2. Install NPM packages
+    ```shell
+    npm install
+    ```
+3. Make .env file in root folder<br/>
+    example .env
+    ```shell
+    dB_connection = "your mongo string connection"
+    PORT = "port to run in localhost"
+    JWTKey = "your jwt key"
+    origin_fe "your frontend domain"
+    ```
+4. Run the program
+    ```shell
+    npm start
+    ```
+
+## Support File
+- [Slide Presentasi][ppt-file]
+- [Video Presentasi][video-file]
+
+
+[frontend-side]: https://github.com/wiweka24/frontend-kelompok4
+[listify-page]: https://listifyY.vercel.app/#/
+[node-js]: https://nodejs.org/en/download/
+[design-file]: https://www.figma.com/file/mYANo06pmE27YNkZK8TPb8/FE-PAW-Kelompok-4?node-id=0%3A1&t=C7szVUn5GEn7dK4S-1
+[ppt-file]: https://docs.google.com/presentation/d/1xN3h04Bqr6y9nXhQ7LLkbrvvxQdB6QWa_AgfCoISE3s/edit#slide=id.g105f6cd14c6_0_3872
+[video-file]: https://youtu.be/7gDu5UtYKfE

@@ -1,83 +1,125 @@
+<!-- markdownlint-configure-file {
+  "MD013": {
+    "code_blocks": false,
+    "tables": false
+  },
+  "MD033": false,
+  "MD041": false
+} -->
+
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/55451337/206634209-fe22de49-b33e-4409-817a-a13a7a758eae.png"  />
+
+# listify
+
+this is frontend side of listify project
+
+A To do list Web App, created for Pemrograman Aplikasi Web class <br/>
+check more about backend side [here][backend-side]
+
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
+
+[Preview](#preview) •
+[Web Page](#web-page) •
+[Output Structure](#output-structure) •
+[Prerequisites](#prerequisites) •
+[Getting Started](#getting-started) •
+[Support File](#support-file)
+
 </div>
 
-<h1 align="center">
-  PAW: Pieces of ArtWork
-</h1>
+## Preview
 
-<p align="center">
-  PAW merupakan Online Exhibitions yang akan menampilkan berbagai karya seni beserta deskripsi dan pembuat karya
-</p>
+[Listify Preview][listify-gif]
 
-## Description
+## Web Page
 
-<p align="justify">
-PAW merupakan Online Exhibitions yang akan menampilkan berbagai karya seni beserta deskripsi dan pembuat karya
-PAW merupakan salah satu website online exhibitions untuk menampilkan berbagai karya seni dua dimensi beserta pembuat karyanya. Membantu para user untuk merasakan pengalaman berkunjung ke art exhibition yang dapat di kunjungi di mana pun dan kapan pun. Selain itu, user juga dapat menambahkan karya seni dua dimensi miliknya hanya dengan mendaftar pada website ini.
-</p>
+[Listify Website][listify-page]
 
-## Related Repository
+## Author
+- [Wiweka Yoga Sadewa](https://github.com/wiweka24)
+- [Hapsari Prabandhari](https://github.com/Hapsarip)
+- [Kurnia Dwi Utami](https://github.com/kurniakdu)
+- [Muhammad Zikriansyah](https://github.com/MuhammadZikriansyah)
+- [Vira Ayu Oktaviani](https://github.com/viraayuoktvn)
 
-- [Frontend Repo](https://github.com/jovianjr/paw-fe) (current)
-- [Backend Repo](https://github.com/jovianjr/paw-be)
+## Output Structure
 
-## Link
-
-- Slide Presentasi: [Click Here](https://drive.google.com/file/d/1iuDOZVfSfXaGQxV6K9a6XrXHfUT4u28T/view?usp=sharing)
-- Front End: https://pieces-of-artwork.netlify.app
-- Back End: https://api-pieces-of-artwork.vercel.app
-- Prototype: [Click Here](https://www.figma.com/proto/8EclelnGlZwJtwyJGmGHlh/PAW?page-id=151%3A174&node-id=215%3A1568&starting-point-node-id=215%3A1568) 
-
-## Directories
-
-    .
-    ├── public                # static files (public can access)
-    └── src
-        ├── assets              # assets
-        ├── utils               
-        │   |                   # all about logic
-        │   ├── constants       # constant values
-        │   ├── context         # context, shared state
-        │   ├── helpers         # helper functions
-        │   └── services        # services (request api)
-        ├── views
-        │   |                   # all about UI
-        │   ├── components      # collection of UI components
-        │   ├── elements        # smallest UI thing
-        │   ├── layouts         # UI Layout
-        │   ├── pages           # pages
-        │   └── styles          # css files
-        ├── app.jsx
-        └── main.jsx
-
-## How to use
-Don't forget to fill the .env files
-
-### npm
-
-```bash
-npm install
-npm run dev
+```shell
+frontend-kelompok4/
+├── public/
+├── src/
+|   ├── component/
+|   ├── img/
+|   └── pages/
+|   |   ├── Activity.js
+|   |   ├── Calendar.js
+|   |   ├── EditAct.js
+|   |   ├── EditProfile.js
+|   |   ├── Form.js
+|   |   ├── Homepage.js
+|   |   ├── Login.js
+|   |   ├── NotFound.js
+|   |   ├── Profile.js
+|   |   └── Register.js
+|   ├── App.js
+|   ├── index.js
+|   ├── index.css
+|   └── ...
+├── package.json
+├── tailwind.config.json
+└── ...
 ```
 
-### yarn
-
-```bash
-yarn
-yarn dev
+## Dependencies
+```shell
+react
+axios
+moment
+react-toastify
+react-dotenv
+tailwindcss
 ```
 
-## Contributing
+## Prerequisites
+[Download][node-js] and install Node.js version 16.15 or higher.
 
-Please see our [contributing.md](https://github.com/jovianjr/paw-fe/blob/development/contributing.md).
+## Getting Started
+Setting up project for local usage.
+1. Clone or Download this repository
+    ```shell
+    https://github.com/wiweka24/frontend-kelompok4.git
+    ```
+    if using SSH
+    ```shell
+    git@github.com:wiweka24/frontend-kelompok4.git
+    ```
+2. Install NPM packages
+    ```shell
+    npm install
+    ```
+3. Make .env file in root folder<br/>
+    example .env
+    ```shell
+    REACT_APP_API_DOMAIN = "your backend domain"
+    ```
+4. Run the program
+    ```shell
+    npm start
+    ```
 
-## Anggota Kelompok 7
+## Support File
+- [Design UI][design-file]<br/>
+- [Slide Presentasi][ppt-file]
 
-| Nama                          | NIM                |
-| ----------------------------- | ------------------ |
-| Alphonsus Jovian Joy Reynaldo | 20/460539/TK/51128 |
-| Adinda Luthfiah S             | 20/463587/TK/51579 |
-| Aulia Nur Fajriyah            | 20/456360/TK/50490 |
-| Siti malatania                | 20/456380/TK/50510 |
-| Wardatul Radhiyyah            | 20/456381/TK/50511 |
+
+
+
+[backend-side]: https://github.com/Hapsarip/api-crud-kelompok4
+[listify-page]: https://listifyY.vercel.app/#/
+[node-js]: https://nodejs.org/en/download/
+[design-file]: https://www.figma.com/file/mYANo06pmE27YNkZK8TPb8/FE-PAW-Kelompok-4?node-id=0%3A1&t=C7szVUn5GEn7dK4S-1
+[ppt-file]: https://docs.google.com/presentation/d/1OA5iKPMLR1K8ttZ1dSMloB1PQbUx3Vknz8xOXvhS39Q/edit?usp=sharing
+[listify-gif]: https://user-images.githubusercontent.com/70740913/206736523-34c932b4-33f1-4a85-bc8a-ffedef646cfd.mp4
