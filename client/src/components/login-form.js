@@ -26,7 +26,12 @@ export default function LoginForm(){
           password: values.password
         })
 
-      toast.success(res.data, toastifyConfig);
+      toast.success("Login Success", toastifyConfig);
+      //save res.data to cookie
+      localStorage.setItem('auth_token', res.data)
+      // set cookie
+      document.cookie = `auth_token=${res.data}; path=/; max-age=3600; samesite=none; secure`
+
       navigate("/activities")
   
     } catch (err) {

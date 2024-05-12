@@ -12,6 +12,45 @@ export default function Activity({searchData, category}) {
   }})
   const URL = URI + "/activity"
 
+  const activities = [
+    {
+      actName: "Write a blog post",
+      actCategory: "Content Creation",
+      actDate: new Date('2024-05-13'), // Set a specific date for example
+      actDescription: "Research and write a blog post on a relevant topic.",
+      actStatus: "2-todo"
+    },
+    {
+      actName: "Go for a run",
+      actCategory: "Health & Fitness",
+      actDescription: "Run for 30 minutes outdoors.",
+      actDate: new Date('2024-05-13'),
+      actStatus: "1-ongoing"
+    },
+    {
+      actName: "Grocery shopping",
+      actCategory: "Errands",
+      actDescription: "Buy groceries for the next week.",
+      actDate: new Date('2024-05-13'),
+      actStatus: "3-done"
+    },
+    {
+      actName: "Learn a new coding skill",
+      actCategory: "Professional Development",
+      actDescription: "Spend 30 minutes practicing a new programming concept.",
+      actDate: new Date('2024-05-13'),
+      actStatus: "2-todo"
+    },
+    {
+      actName: "『Algorhythm』2024.5.15 COMEBACK OT4!",
+      actCategory: "Relaxation",
+      actDescription: "",
+      actDate: new Date('2024-05-15'),
+      actStatus: "1-ongoing"
+    }
+  ];
+
+  /*
   useEffect(() => {
 
     (async () => {
@@ -28,7 +67,7 @@ export default function Activity({searchData, category}) {
       }
       })()
   }, [searchData, showModal, category])
-
+  */
   const handleClick = (act) => {
     setActToShow(act)
     setShowModal(true)
@@ -37,7 +76,7 @@ export default function Activity({searchData, category}) {
   return (
     <ul>
     {
-      activity.map((act)=>(
+      activities.map((act)=>(
         <li key={act._id}>
           <Fragment>
 

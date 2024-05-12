@@ -6,7 +6,7 @@ export const axiosInstance = axios.create({
 })
 
 export const URI = process.env.REACT_APP_API_DOMAIN
-console.log(URI)
+
 export const notLogin = () => {
   const navigate = useNavigate
   navigate('/')

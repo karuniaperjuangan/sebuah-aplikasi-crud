@@ -64,9 +64,7 @@ exports.Login = async (req, res, next) => {
         secure: true
       })
       .status(200)
-      .send({ 
-        message: "Logged in successfully"
-      })
+      .send(token)
 
 	} catch (err) {
 		next(err)

@@ -11,8 +11,18 @@ require('dotenv').config()
 
 const app = express()
 
-app.use(cors());
-
+app.use(cors(
+  {
+    origin: true,
+    credentials: true
+  }
+));
+app.options('*', cors(
+  {
+    origin: true,
+    credentials: true
+  }
+));
 app.use(function (req, res, next) {
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
   res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
@@ -28,6 +38,9 @@ app
   .use("/user", authRoutes)
   .use("/activity", activityRoutes)
   .get("/", (req, res) => res.send("Welcome to the API!"))
+  .get("/test-stress", (req, res) => {
+    res.send("Welcome to the API!"+`${process.env.MESSAGE}`)
+  })
   .all("*", (req, res) => res.send("You've tried reaching a route that doesn't exist."))
 
 app.use(errorHandler)

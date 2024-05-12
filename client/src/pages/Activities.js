@@ -48,7 +48,7 @@ export default function Activities() {
   return (
     <div className='w-full flex-col items-top justify-center lg:w-full'>
       <div className='items-center overflow-hidden flex justify-between bg-white w-full p-4 border-2 border-gray-100 mx-auto'>
-        <h1 className='justify-center py-4 px-5 items-center text-3xl font-bold'>Activity List</h1>
+        <h1 className='justify-center py-4 px-5 items-center text-3xl font-bold'>Activities</h1>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-2 items-center'>
           
           <div className='md:order-first order-last mr-5 items-center'>
@@ -80,13 +80,14 @@ export default function Activities() {
               >  
             </input>
           </div>
-
+          {/* 
           <Link  
             className="flex items-center py-2 px-4 rounded active:scale-[0.98]"
             to='/form'
             >
             <AddBtnIcon/>
           </Link>
+          */}
           </div>
 
         </div>
