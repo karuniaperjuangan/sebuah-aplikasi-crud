@@ -16,7 +16,7 @@ import FormEdit from './pages/EditAct'
 import ProfileEdit from './pages/EditProfile'
 // import * as dotenv from 'dotenv'
 // dotenv.config()
-console.log(process.env.REACT_APP_API_DOMAIN)
+console.log('http://localhost:2521')
 export default function App() {
   return (
     <Router>
